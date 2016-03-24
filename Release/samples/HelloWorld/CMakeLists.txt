@@ -1,0 +1,2 @@
+add_subdirectory(HelloWorldSpeaker)
+add_subdirectory(HelloWorldListener)
