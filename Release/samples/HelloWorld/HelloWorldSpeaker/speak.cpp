@@ -16,7 +16,7 @@ using namespace std;
 void DisplayResponse(json::value response)
 {
     if (!response.is_null())
-    { 
+    {
         StringBox payload = StringBox::FromJSON(response.as_object());
         cout << payload.string << endl;
     }
@@ -63,7 +63,7 @@ int main(int argc, char** argv)
     payload.string = "Hello World!";
     ucout << payload.AsJSON().serialize() << endl;
 
-    make_request(client, "", methods::PUT, payload.AsJSON());
+    make_request(client, "/post", methods::PUT, payload.AsJSON());
 
     std::cout << "Press ENTER to exit." << std::endl;
 
